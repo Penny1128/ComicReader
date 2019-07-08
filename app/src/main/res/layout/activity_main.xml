@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_newest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Newest"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_favor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favor"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comic"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DBDemo"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_fresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comic_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
