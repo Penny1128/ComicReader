@@ -20,7 +20,7 @@ public class ParseJson {
 
 
     public static ArrayList<String> initJsonLinks(Integer firstNum, Integer finalNum) {
-        ArrayList<String> jsonLinks = new ArrayList<String>();
+        ArrayList<String> jsonLinks = new ArrayList<>();
 
         for (int i = 0; i < (finalNum - firstNum + 1); i++) {
             int currentNum = firstNum + i;

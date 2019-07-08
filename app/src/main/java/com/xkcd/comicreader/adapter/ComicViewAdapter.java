@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -66,17 +65,17 @@ public class ComicViewAdapter extends RecyclerView.Adapter<ComicViewAdapter.Item
         private TextView mText;
         private  int mPosition;
 
-        public ItemHolder(View itemView){
+        private ItemHolder(View itemView){
 
             super(itemView);
-            mText = (TextView) itemView.findViewById(R.id.text);
+            mText = itemView.findViewById(R.id.text);
 
             // set item onClick listener
             clickEvent(itemView);
 
         }
 
-        public void setData(String data, int position){
+        private void setData(String data, int position){
             mText.setText(data);
             this.mPosition = position;
         }

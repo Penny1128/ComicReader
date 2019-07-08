@@ -7,12 +7,12 @@
         android:text="Comic show demo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"/>
+        android:textSize="30sp"/>
     <TextView
         android:id="@+id/show_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50dp"/>
+        android:textSize="50sp"/>
 
     <com.android.volley.toolbox.NetworkImageView
         android:id="@+id/show_img"
@@ -24,6 +24,6 @@
         android:id="@+id/show_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
 </LinearLayout>

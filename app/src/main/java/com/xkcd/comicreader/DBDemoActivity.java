@@ -20,7 +20,6 @@ public class DBDemoActivity extends Activity implements View.OnClickListener {
     private Button delBtn;
     private Button updateBtn;
     private Button inquireBtn;
-    private TextView resultView;
 
     private ComicDatabaseHelper comicBaseHelper;
 
@@ -36,7 +35,6 @@ public class DBDemoActivity extends Activity implements View.OnClickListener {
         delBtn = findViewById(R.id.db_del);
         updateBtn = findViewById(R.id.db_update);
         inquireBtn = findViewById(R.id.db_inquire);
-        resultView = findViewById(R.id.show_result);
 
         addBtn.setOnClickListener(this);
         delBtn.setOnClickListener(this);

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import com.xkcd.comicreader.model.Comic;
 import com.xkcd.comicreader.util.Constant;
@@ -74,7 +73,7 @@ public class ComicDatabaseHelper extends SQLiteOpenHelper {
     // improve later: make the sql as same as Comic object, then use set to get Comic object
     // so this function could be used in show comic image and detailed information
     public HashMap<String, String> getOneComic(Integer comicId){
-        HashMap<String, String> comicInfos = new HashMap<String, String>();
+        HashMap<String, String> comicInfos = new HashMap<>();
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query("favor", new String[] { "img",
@@ -87,9 +86,7 @@ public class ComicDatabaseHelper extends SQLiteOpenHelper {
             }
         }
 
-        if (cursor != null) {
-            cursor.close();
-        }
+        cursor.close();
 
         return comicInfos;
     }
@@ -100,7 +97,7 @@ public class ComicDatabaseHelper extends SQLiteOpenHelper {
      * @return show title list , formated as {comidid}:{comictitle}
      */
     public ArrayList<String> getComicList(Integer status){
-        ArrayList<String> favorComics = new ArrayList<String>();
+        ArrayList<String> favorComics = new ArrayList<>();
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.query("favor", new String[] { "id",
@@ -113,9 +110,7 @@ public class ComicDatabaseHelper extends SQLiteOpenHelper {
             }
         }
 
-        if (cursor != null) {
-            cursor.close();
-        }
+        cursor.close();
 
         return favorComics;
     }

@@ -5,9 +5,10 @@
 
     <TextView
         android:text="Favor list Demo"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favor_view"
         android:layout_width="match_parent"
