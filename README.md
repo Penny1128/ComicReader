@@ -23,3 +23,6 @@ Json link: http://xkcd.com/info.0.json
 
 ## Improve
 
+## Config
+* Add volley-1.1.1.aar and gson-2.8.5.jar
+* Add recyclerview and swiperefreshlayout (in androidx)
