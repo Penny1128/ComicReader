@@ -20,9 +20,11 @@ Json link: http://xkcd.com/info.0.json
 ## Approach
 
 ## To-do
+* Fetch data from network and insert to DB
 
 ## Improve
 
 ## Config
 * Add volley-1.1.1.aar and gson-2.8.5.jar
 * Add recyclerview and swiperefreshlayout (in androidx)
+* If no data in DB, Click "DBDemo", then click "Add a comic"
