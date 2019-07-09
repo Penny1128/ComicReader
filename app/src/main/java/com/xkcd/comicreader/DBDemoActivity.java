@@ -50,7 +50,27 @@ public class DBDemoActivity extends Activity implements View.OnClickListener {
 
         switch (view.getId()){
             case R.id.db_add:
-                comicBaseHelper.insert(comic, Constant.UNREAD_STATUS);
+
+                ArrayList<String> unreadComics = new ArrayList<>();
+                unreadComics.addAll(Constant.INIT_DATA);
+                unreadComics.addAll(Constant.MORE_DATA);
+                ArrayList<String> favorComics = Constant.FAVOR_DATA;
+                ArrayList<String> readComics = Constant.OLD_DATA;
+                ArrayList<String> newComics = Constant.NEW_DATA;
+
+                for (String s : readComics){
+                    comicBaseHelper.insert(ParseJson.jsonToObj(s), Constant.INIT_STATUS);
+                }
+
+                for (String s : unreadComics){
+                    comicBaseHelper.insert(ParseJson.jsonToObj(s), Constant.UNREAD_STATUS);
+                }
+                for (String s : favorComics){
+                    comicBaseHelper.insert(ParseJson.jsonToObj(s), Constant.FAVOR_STATUS);
+                }
+                for (String s : newComics){
+                    comicBaseHelper.insert(ParseJson.jsonToObj(s), Constant.UNREAD_STATUS);
+                }
                 Toast.makeText(DBDemoActivity.this, "ADD "+ comic.getNum(), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.db_del:
@@ -62,8 +82,8 @@ public class DBDemoActivity extends Activity implements View.OnClickListener {
                 Toast.makeText(DBDemoActivity.this, "UPDATE" + comic.getNum(), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.db_inquire:
-                ArrayList<String> favorComics = comicBaseHelper.getComicList(Constant.INIT_STATUS);
-                Toast.makeText(DBDemoActivity.this, favorComics.toString(), Toast.LENGTH_SHORT).show();
+                ArrayList<String> inquireFavors = comicBaseHelper.getComicList(Constant.INIT_STATUS);
+                Toast.makeText(DBDemoActivity.this, inquireFavors.toString(), Toast.LENGTH_SHORT).show();
                 break;
 
         }
